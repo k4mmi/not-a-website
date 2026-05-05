@@ -1,0 +1,47 @@
+@use './reset' as *;
+@use './variables' as *;
+@use './fonts' as *;
+@use './mixins' as *;
+
+* {
+    box-sizing: border-box;
+    line-height: 1.2; // You will be glad because of this default line hight... you always forget it
+    scrollbar-width: thin;
+    cursor: none;
+    // user-select: none; // Disable selection of all elems cuz it piss me off >:(
+}
+
+html, body, #root {
+    overscroll-behavior: none;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100dvw;
+    background: $color2-solid;
+    user-select: none;
+}
+
+
+
+::selection {
+    color: purple;
+    background: yellow;
+}
+
+// Hide goofy debug color alts of images 
+img {
+    color: #F0F;
+}
+
+// hr {
+//     width: 100%;
+//     border-bottom: $borderSize solid $color2-solid;
+//     margin-top: $spaceLarge;
+//     margin-bottom: $spaceLarge;
+// }
+
+input, textarea, button, select, a {
+    -webkit-tap-highlight-color: transparent;
+}

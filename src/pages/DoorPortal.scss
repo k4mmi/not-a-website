@@ -1,0 +1,7 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins.scss' as *;
+
+.doorPortal {
+    background: radial-gradient( $color0-solid 0%, $color5-solid 100%,);
+    overflow: hidden;
+}

@@ -1,0 +1,7 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins.scss' as *;
+
+.end {
+    background: url("./sky.webp") center center / cover;
+    overflow: hidden;
+}

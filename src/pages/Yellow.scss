@@ -1,0 +1,7 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins.scss' as *;
+
+.yellow {
+    background: $color3-solid;
+    overflow: hidden;
+}

@@ -1,0 +1,12 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+@font-face {
+    font-family: "basic";
+    src: url(../fonts/Mluvka/Mluvka-Regular.woff2);
+}
+
+@font-face {
+    font-family: "accent";
+    src: url(../fonts/BackOut/BackOut.woff2);
+}

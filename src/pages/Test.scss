@@ -1,0 +1,10 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins.scss' as *;
+
+.test {
+    background: $color1-solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 56px;
+}

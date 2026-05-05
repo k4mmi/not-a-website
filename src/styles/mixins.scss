@@ -1,0 +1,135 @@
+@use './variables' as *;
+
+@mixin fontParagraph {
+    font-family: basic, sans-serif;
+    font-size: 18px;
+    transition: $animationSpeedNormal font-size;
+    color: $color1-solid;
+    filter: url("#effect");
+
+    * {
+        font-family: basic, sans-serif;
+        font-size: 18px;
+        transition: $animationSpeedNormal font-size;
+        color: $color1-solid;
+    }
+
+    @media (width <=$responsiveMedium) {
+        font-size: 18px;
+
+        & * {
+            font-size: 18px;
+        }
+    }
+
+    @media (width <=$responsiveSmall) {
+        font-size: 16px;
+
+        & * {
+            font-size: 16px;
+        }
+    }
+}
+
+@mixin fontHeading {
+    font-family: accent, monospace;
+    font-size: 52px;
+    transition: $animationSpeedNormal font-size;
+    color: $color1-solid;
+    filter: url("#effect");
+
+    * {
+        font-family: accent, monospace;
+        font-size: 52px;
+        transition: $animationSpeedNormal font-size;
+        color: $color1-solid;
+    }
+
+    @media (width <=$responsiveMedium) {
+        font-size: 38px;
+
+        & * {
+            font-size: 38px;
+        }
+    }
+
+    @media (width <=$responsiveSmall) {
+        font-size: 10vw;
+
+        & * {
+            font-size: 10vw;
+        }
+    }
+}
+
+@mixin fontSubHeading {
+    font-size: 36px;
+    font-family: accent, monospace;
+    transition: $animationSpeedNormal font-size;
+    color: $color1-solid;
+    filter: url("#effect");
+
+    * {
+        font-family: accent, monospace;
+        font-size: 36px;
+        transition: $animationSpeedNormal font-size;
+        color: $color1-solid;
+    }
+
+    @media (width <=$responsiveMedium) {
+        font-size: 24px;
+
+        & * {
+            font-size: 24px;
+        }
+    }
+
+    @media (width <=$responsiveSmall) {
+        font-size: 8vw;
+
+        & * {
+            font-size: 8vw;
+        }
+    }
+}
+
+@mixin fontTitle {
+    font-family: accent, monospace;
+    font-size: 102px;
+    transition: $animationSpeedNormal font-size;
+    color: $color1-solid;
+    filter: url("#effect");
+
+    * {
+        font-family: accent, monospace;
+        font-size: 102px;
+        transition: $animationSpeedNormal font-size;
+        color: $color1-solid;
+    }
+
+    @media (width <=$responsiveMedium) {
+        font-size: 62px;
+
+        & * {
+            font-size: 62px;
+        }
+    }
+
+    @media (width <=$responsiveSmall) {
+        font-size: 12vw;
+
+        & * {
+            font-size: 12vw;
+        }
+    }
+}
+
+@mixin hoverAnimation {
+    &:hover {
+        scale: 1.05;
+        rotate: 5deg;
+    }
+
+    transition: scale $animationSpeedSlow,
+    rotate $animationSpeedSlow;
+}
