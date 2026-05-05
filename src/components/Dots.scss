@@ -1,0 +1,12 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins.scss' as *;
+
+.dots {
+    height: 30%;
+    width: 20%;
+    background-position: center;
+    background-repeat: no-repeat;
+    rotate: 59deg;
+    position: absolute;
+    pointer-events: none;
+}

@@ -1,0 +1,55 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins.scss' as *;
+
+.boat {
+    height: 100%;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    top: 0%;
+    display: none; // Sun.jsx will make it visible
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    pointer-events: none;
+
+    animation: boatWave 3000ms infinite alternate ease-in-out;
+
+    @keyframes boatWave {
+        from {
+            translate: 0 3%;
+            rotate: 3deg;
+        }
+
+        to {
+            translate: 0 0;
+            rotate: -3deg;
+        }
+    }
+
+    &__texture {
+        background: url("/boat.webp") center center / cover;
+        width: 62.5%;
+        height: 25%;
+        position: absolute;
+        top: 35%;
+        pointer-events: all;
+        transition: scale $animationSpeedSlow;
+        animation: boatRise forwards 3000ms;
+
+        &:hover {
+            scale: 1.1;
+        }
+
+        @keyframes boatRise {
+            from {
+                translate: 0 300%;
+            }
+
+            to {
+                translate: 0 0;
+            }
+        }
+    }
+}

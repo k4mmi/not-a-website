@@ -1,0 +1,63 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins.scss' as *;
+
+.door {
+    height: 71%;
+    width: 30.5%;
+    left: 34.75%;
+    position: relative;
+    top: 13%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+
+    &:hover &__background {
+        filter: brightness(1.1);
+    }
+
+    &__texture {
+        height: 100%;
+        z-index: 101;
+        position: absolute;
+    }
+
+    &__background {
+        background: url("/door_portal.webp") center center/cover no-repeat;
+        position: absolute;
+        height: 94.3%;
+        width: 90%;
+        left: 5%;
+        top: 3%;
+        z-index: 100;
+        overflow: hidden;
+        filter: brightness(1);
+        transition: $animationSpeedExtraSlow 100ms filter;
+    }
+
+    &__glow {
+        display: none;
+        background: $color0-solid;
+        z-index: 102;
+        filter: blur(64px);
+        height: 0%;
+        width: 100%;
+        pointer-events: none;
+        position: absolute;
+
+        animation: doorGlow 1000ms forwards ease-in-out;
+
+        @keyframes doorGlow {
+            0% {
+                width: 100%;
+                height: 0%;
+            }
+
+            100% {
+                width: 400%;
+                height: 500%;
+            }
+        }
+    }
+}

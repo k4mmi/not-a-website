@@ -1,0 +1,49 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins.scss' as *;
+
+.sun {
+    height: 100%;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    top: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__shape {
+        background: $color3-solid;
+        width: 15%;
+        height: 15%;
+        position: absolute;
+        border-radius: 10%;
+        top: 15%;
+        transition: border-radius $animationSpeedExtraSlow, scale $animationSpeedExtraSlow;
+        animation: sunShapeRotate 10000ms forwards linear infinite, sunShapeRise 1000ms;
+
+        &:hover {
+            border-radius: 100%;
+            scale: 1.4;
+        }
+
+        @keyframes sunShapeRotate {
+            0% {
+                rotate: 0;
+            }
+
+            100% {
+                rotate: 360deg;
+            }
+        }
+
+        @keyframes sunShapeRise {
+            0% {
+                transition: 100px 100px;
+            }
+
+            100% {
+                transition: 10px 10px;
+            }
+        }
+    }
+}

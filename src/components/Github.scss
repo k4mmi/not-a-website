@@ -1,0 +1,18 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins.scss' as *;
+
+.github {
+    width: max-content;
+    bottom: $spaceMedium;
+    position: absolute;
+    font-family: basic, monospace;
+    transition: $animationSpeedNormal font-size;
+    text-decoration: underline;
+    color: $color1-solid;
+    font-size: 14px;
+    opacity: .4;
+
+    &:hover {
+        opacity: 1;
+    }
+}

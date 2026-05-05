@@ -1,0 +1,8 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins' as *;
+
+.paragraph {
+    line-height: 150%;
+    margin-bottom: 20px;
+    @include fontParagraph;
+}

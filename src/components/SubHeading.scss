@@ -1,0 +1,8 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins' as *;
+
+.subHeading {
+    line-height: 120%;
+    margin-bottom: 20px;
+    @include fontSubHeading;
+}

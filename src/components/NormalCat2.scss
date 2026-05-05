@@ -1,0 +1,41 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins.scss' as *;
+
+.normalCat2 {
+    width: 40%;
+    left: 33.5%;
+    height: 25.5%;
+    position: absolute;
+    top: 50%;
+    animation: normalCat2 forwards 10s;
+    display: none;
+
+    @keyframes normalCat2 {
+
+        0% {
+            filter: blur(200px);
+        }
+
+        50% {
+            filter: blur(0);
+        }
+
+        70% {
+            translate: 0% 0%;
+        }
+
+        100% {
+            translate: -200% 0%;
+        }
+    }
+
+    &__sky {
+        width: 100%;
+        height: 100%;
+        background-image: url("/not-a-website/cat/cat_sky.webp");
+        background-position: top;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+    }
+}

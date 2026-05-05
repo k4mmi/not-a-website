@@ -1,0 +1,55 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins.scss' as *;
+
+.boat2 {
+    height: 100%;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    top: 0%;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    pointer-events: none;
+
+    animation: boatWave 3000ms infinite alternate ease-in-out;
+
+    @keyframes boatWave {
+        from {
+            translate: 0 3%;
+            rotate: 3deg;
+        }
+
+        to {
+            translate: 0 0;
+            rotate: -3deg;
+        }
+    }
+
+    &__texture {
+        background: url("/boat.webp") center center / cover;
+        width: 62.5%;
+        height: 25%;
+        position: absolute;
+        top: 35%;
+        left: 0%;
+        pointer-events: all;
+        transition: scale $animationSpeedSlow;
+        animation: boatRise2 forwards 10s linear;
+
+        @keyframes boatRise2 {
+            from {
+                translate: -150% 100%;
+                rotate: 0;
+                scale: 1;
+            }
+
+            to {
+                translate: 200% -100%;
+                rotate: -20deg;
+                scale: .6;
+            }
+        }
+    }
+}

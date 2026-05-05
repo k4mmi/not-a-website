@@ -1,0 +1,42 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins.scss' as *;
+
+.startingContainer {
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.starting {
+    background: $color2-solid;
+    height: 100vh;
+    width: 100vw;
+    z-index: 100000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+    animation: startingMove 1000ms 2000ms forwards ease-in-out;
+    flex-direction: column;
+    pointer-events: all;
+
+    @keyframes startingMove {
+        0% {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        100% {
+            transform: scale(5);
+            filter: blur(32px);
+            opacity: 0;
+        }
+    }
+}

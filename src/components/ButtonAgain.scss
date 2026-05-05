@@ -1,0 +1,57 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins.scss' as *;
+
+.buttonAgain {
+    width: 60%;
+    left: 20%;
+    margin: 60% auto;
+    padding: 4% 10% 3% 10%;
+    font-family: accent, monospace;
+    transition: $animationSpeedNormal font-size;
+    color: $color3-solid;
+    background: $color2-solid;
+    justify-content: center;
+    align-items: center;
+    font-size: 4vh;
+    display: flex;
+    transition: scale $animationSpeedSlow;
+    position: absolute;
+
+    &:hover {
+        scale: 1.1;
+        background: $color4-solid;
+    }
+
+    * {
+        font-family: accent, monospace;
+        font-size: 4vh;
+        transition: $animationSpeedNormal font-size;
+        color: $color1-solid;
+    }
+
+    @media (width <=$responsiveLarge) {
+        font-size: 4vw;
+
+        & * {
+            font-size: 4vw;
+        }
+
+    }
+
+    @media (width <=$responsiveMedium) {
+        font-size: 5vw;
+
+        & * {
+            font-size: 5vw;
+        }
+
+    }
+
+    @media (width <=$responsiveSmall) {
+        font-size: 7vw;
+
+        & * {
+            font-size: 7vw;
+        }
+    }
+}

@@ -1,0 +1,11 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins.scss' as *;
+
+.cat {
+    width: 40%;
+    height: 21%;
+    // height: 25.55%;
+    background-position: top;
+    background-size: cover;
+    position: absolute;
+}

@@ -1,0 +1,13 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins.scss' as *;
+
+.cursor {
+    background-position: 0 0;
+    background-size: 125px 145px;
+    background-repeat: no-repeat;
+    height: 145px;
+    width: 125px;
+    position: absolute;
+    pointer-events: none;
+    z-index: 100000000;
+}
