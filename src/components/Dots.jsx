@@ -12,12 +12,10 @@ export function Dots({top = 0, left = 0}) {
         const $dots = root.current;
         
         setInterval(() => {
-            console.log("uwu");
             setDotsTexture(1);
 
             setTimeout(() => {
                 setDotsTexture(2);
-            console.log("uwu2");
 
                 setTimeout(() => {
                     setDotsTexture(3);

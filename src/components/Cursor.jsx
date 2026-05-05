@@ -16,12 +16,13 @@ export function Cursor() {
 
         function mousemove() {
 
-            navigator.userAgent.includes("iPad")
-            navigator.userAgent.includes("iPhone")
-            navigator.userAgent.includes("Android")
-
             function isItTouchScreen() {
-                return (('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0))
+
+                function detect(_key) {
+                    return navigator.userAgent.includes(_key);
+                }
+
+                return detect("Android") || detect("Mobile") || detect("iPhone") || detect("iPad");
             }
 
             if (!isItTouchScreen()) {
