@@ -5,7 +5,6 @@
     font-size: 18px;
     transition: $animationSpeedNormal font-size;
     color: $color1-solid;
-    filter: url("#effect");
 
     * {
         font-family: basic, sans-serif;
@@ -36,7 +35,6 @@
     font-size: 52px;
     transition: $animationSpeedNormal font-size;
     color: $color1-solid;
-    filter: url("#effect");
 
     * {
         font-family: accent, monospace;
@@ -67,7 +65,6 @@
     font-family: accent, monospace;
     transition: $animationSpeedNormal font-size;
     color: $color1-solid;
-    filter: url("#effect");
 
     * {
         font-family: accent, monospace;
@@ -98,7 +95,6 @@
     font-size: 102px;
     transition: $animationSpeedNormal font-size;
     color: $color1-solid;
-    filter: url("#effect");
 
     * {
         font-family: accent, monospace;
